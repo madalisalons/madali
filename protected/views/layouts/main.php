@@ -21,38 +21,62 @@
 <body>
 
 <div class="container" id="page">
+	<div id="head">
+		<div>
+			<div id="header">
+				<a href="index.php?r=site/index">
+					<div id="logo">
+						<p id="m">m</p>
+						<p id="d">d</p>
+						<p id="l">l</p>
+						<p id="text">beauty & health</p>
+					</div>
+				</a>
+			</div><!-- header -->
+			<div id="mainmenu">
+				<?php $this->widget('zii.widgets.CMenu',array(
+					'items'=>array(
+						array('label'=>'Գլխավոր', 'url'=>array('/site/index')),
+						array('label'=>'Մեր մասին', 'url'=>array('/site/page', 'view'=>'about')),
+						array('label'=>'Կապ', 'url'=>array('/site/contact'))
+					),
+				)); ?>
+			</div><!-- mainmenu -->
+			<div id="user">
+				<?php $this->widget('zii.widgets.CMenu',array(
+					'items'=>array(
+						array('label'=>Yii::app()->user->name, 'url'=>array('/site/logout'), 'visible'=>!Yii::app()->user->isGuest)
+					),
+				)); ?>
+			</div><!-- user -->
+			<div id="loginmenu">
+				<?php $this->widget('zii.widgets.CMenu',array(
+					'items'=>array(
+						array('label'=>'Մուտք', 'url'=>array('/site/login'), 'visible'=>Yii::app()->user->isGuest),
+						array('label'=>'Ելք', 'url'=>array('/site/logout'), 'visible'=>!Yii::app()->user->isGuest)
+					),
+				)); ?>
+			</div><!-- loginmenu -->
+		</div>
+	</div><!-- head -->
 
-	<div id="header">
-		<div id="logo"><?php echo CHtml::encode(Yii::app()->name); ?></div>
-	</div><!-- header -->
+	<div id='contentarea'>
+		<?php if(isset($this->breadcrumbs)):?>
+			<?php $this->widget('zii.widgets.CBreadcrumbs', array(
+				'links'=>$this->breadcrumbs,
+			)); ?><!-- breadcrumbs -->
+		<?php endif?>
 
-	<div id="mainmenu">
-		<?php $this->widget('zii.widgets.CMenu',array(
-			'items'=>array(
-				array('label'=>'Home', 'url'=>array('/site/index')),
-				array('label'=>'About', 'url'=>array('/site/page', 'view'=>'about')),
-				array('label'=>'Contact', 'url'=>array('/site/contact')),
-				array('label'=>'Login', 'url'=>array('/site/login'), 'visible'=>Yii::app()->user->isGuest),
-				array('label'=>'Logout ('.Yii::app()->user->name.')', 'url'=>array('/site/logout'), 'visible'=>!Yii::app()->user->isGuest)
-			),
-		)); ?>
-	</div><!-- mainmenu -->
-	<?php if(isset($this->breadcrumbs)):?>
-		<?php $this->widget('zii.widgets.CBreadcrumbs', array(
-			'links'=>$this->breadcrumbs,
-		)); ?><!-- breadcrumbs -->
-	<?php endif?>
+		<?php echo $content; ?>
 
-	<?php echo $content; ?>
+		<div class="clear"></div>
 
-	<div class="clear"></div>
-
-	<div id="footer">
-		Copyright &copy; <?php echo date('Y'); ?> by My Company.<br/>
-		All Rights Reserved.<br/>
-		<?php echo Yii::powered(); ?>
-	</div><!-- footer -->
-
+		<div id="footer">
+			<p>
+				&copy; MaDaLi.am 2015
+			</p>
+		</div><!-- footer -->
+	</div><!-- contentarea -->
 </div><!-- page -->
 
 </body>

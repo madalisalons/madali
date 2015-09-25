@@ -1,30 +1,47 @@
+@font-face{font-family:LittleLord;src:url('LittleLordFontleroyNF.ttf');}
+@font-face{font-family:mariam;src:url('GHEAMariamReg.otf');}
+@font-face{font-family:norkirk;src:url('NorKirk.ttf');}
+
 body
 {
 	margin: 0;
 	padding: 0;
 	color: #555;
-	font: normal 10pt Arial,Helvetica,sans-serif;
+	font: normal 10pt mariam;
 	background: #EFEFEF;
 }
 
 #page
 {
-	margin-top: 5px;
-	margin-bottom: 5px;
 	background: white;
-	border: 1px solid #C9E0ED;
+}
+
+#head
+{
+	background: url('../images/1.png');
+	opacity: 0.9;
+  height: 120px;
+  position: fixed;
+  width: 100%;
 }
 
 #header
 {
 	margin: 0;
-	padding: 0;
-	border-top: 3px solid #C9E0ED;
+  padding: 10px 20px;
+  float: left;
+}
+
+#contentarea
+{
+	padding-top: 120px;
+	background: #F1ECEC;
 }
 
 #content
 {
     padding: 20px;
+		background: #FFF;
 }
 
 #sidebar
@@ -34,22 +51,65 @@ body
 
 #footer
 {
-	padding: 10px;
-	margin: 10px 20px;
-	font-size: 0.8em;
+	padding: 10px 20px;
+	font-size: 15px;
 	text-align: center;
-	border-top: 1px solid #C9E0ED;
+	background: url('../images/1.png');
+	color: #F2ECEC;
+	height: 80px;
+}
+
+#footer p
+{
+	text-align: left;
+	margin-top: 55px!important;
 }
 
 #logo
 {
-	padding: 10px 20px;
-	font-size: 200%;
+	width: 200px;
+	height: 100px;
+  background: #F1EAEA;
+	font-family: LittleLord;
+	font-size: 60px;
+	color: #421566;
+  -moz-border-radius: 100px / 50px;
+  -webkit-border-radius: 100px / 50px;
+  border-radius: 100px / 50px;
+}
+
+#m
+{
+	text-transform: uppercase;
+	position: absolute;
+	margin: 12px 22px;
+}
+
+#d
+{
+	text-transform: uppercase;
+	position: absolute;
+	margin: 12px 67px;
+}
+
+#l
+{
+	text-transform: uppercase;
+	position: absolute;
+	margin: 29px 56px;
+}
+
+#text
+{
+	position: absolute;
+	margin: 57px 85px;
+	font-size: 22px;
 }
 
 #mainmenu
 {
-	background:white url(bg.gif) repeat-x left top;
+	float: left;
+	margin-top: 45px;
 }
 
 #mainmenu ul
@@ -65,19 +125,118 @@ body
 
 #mainmenu ul li a
 {
-	color:#ffffff;
+	color:#F1EAEA;
 	background-color:transparent;
-	font-size:12px;
+	font-size:17px;
 	font-weight:bold;
+	font-family: norkirk;
+	text-transform: uppercase;
 	text-decoration:none;
-	padding:5px 8px;
+	padding:5px 15px;
 }
 
-#mainmenu ul li a:hover, #mainmenu ul li.active a
+#mainmenu ul li a {
+	display: inline-block;
+	position: relative;
+}
+
+#mainmenu ul li a:after {
+	content: '';
+	display: block;
+	margin: auto;
+	height: 2px;
+	width: 0px;
+	background: transparent;
+	transition: width .5s ease, background-color .5s ease;
+	margin-top: 10px;
+}
+
+#mainmenu ul li a:hover:after, #mainmenu ul li.active a:after {
+	width: 100%;
+	background: #F1EAEA;
+}
+
+#user
 {
-	color: #6399cd;
-	background-color:#EFF4FA;
+	float: left;
+  margin-left: 15px;
+	margin-top: 44px;
+}
+
+#user ul
+{
+	padding:6px 20px 5px 20px;
+	margin:0px;
+}
+
+#user ul li
+{
+	display: inline;
+}
+
+#user ul li a
+{
+	color:#F1EAEA;
+	background-color:transparent;
+	font-size:17px;
+	/*font-family: LittleLord;*/
 	text-decoration:none;
+	padding:5px 15px;
+}
+
+#user ul li a {
+	display: inline-block;
+	position: relative;
+}
+
+#user ul li a:after {
+	content: '';
+	display: block;
+	margin: auto;
+	height: 2px;
+	width: 0px;
+	background: transparent;
+	transition: width .5s ease, background-color .5s ease;
+	margin-top: 10px;
+}
+
+#user ul li a:hover:after, #user ul li.active a:after {
+	width: 100%;
+	background: #F1EAEA;
+}
+
+#loginmenu
+{
+	float: right;
+	margin-right: 20px;
+	margin-top: 28px;
+	text-align: center;
+}
+
+#loginmenu ul
+{
+	margin: 0;
+	padding: 0;
+}
+
+#loginmenu ul li
+{
+	display: inline;
+}
+
+#loginmenu ul li a
+{
+	display:block;
+	width: 120px;
+	color: #421566;
+	font-size: 22px;
+	font-weight: bold;
+	text-align: center;
+	background: #F1EAEA;
+	-moz-border-radius: 100px / 50px;
+	-webkit-border-radius: 100px / 50px;
+	border-radius: 100px / 50px;
+	padding: 15px 0;
 }
 
 div.flash-error, div.flash-notice, div.flash-success
@@ -137,8 +296,13 @@ div.view
 
 div.breadcrumbs
 {
-	font-size: 0.9em;
-	padding: 5px 20px;
+	font-size: 15px;
+	padding: 15px 20px;
+}
+
+div.breadcrumbs a, div.breadcrumbs span
+{
+	color: #421566;
 }
 
 div.breadcrumbs span
