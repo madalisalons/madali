@@ -40,8 +40,9 @@ body
 
 #content
 {
-    padding: 20px;
-		background: #FFF;
+  padding: 20px;
+	margin-top: 50px;
+	background: #FFF;
 }
 
 #sidebar
@@ -298,6 +299,7 @@ div.breadcrumbs
 {
 	font-size: 15px;
 	padding: 15px 20px;
+	margin-bottom: -50px;
 }
 
 div.breadcrumbs a, div.breadcrumbs span
