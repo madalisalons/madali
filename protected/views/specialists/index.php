@@ -1,8 +1,8 @@
 <?php
-/* @var $this UsersController */
+/* @var $this SpecialistsController */
 
 $this->breadcrumbs=array(
-	'Գրանցվել որպես հաճախորդ',
+	'Գրանցվել որպես մասնագետ',
 );
 ?>
 <h1><?php echo $this->id . '/' . $this->action->id; ?></h1>

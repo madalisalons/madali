@@ -40,3 +40,43 @@ Stack trace:
 REQUEST_URI=/madali.am/index.php?r=site/login
 HTTP_REFERER=http://localhost/madali.am/index.php?r=site/login
 ---
+2015/09/26 10:43:58 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "users".' in /var/www/madali/framework/web/CController.php:483
+Stack trace:
+#0 /var/www/madali/framework/web/CController.php(270): CController->missingAction('users')
+#1 /var/www/madali/framework/web/CWebApplication.php(282): CController->run('users')
+#2 /var/www/madali/framework/web/CWebApplication.php(141): CWebApplication->runController('site/users')
+#3 /var/www/madali/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#4 /var/www/madali/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/madali/index.php?r=site/users
+HTTP_REFERER=http://localhost/madali/index.php?r=site/index
+---
+2015/09/26 10:44:22 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "../users".' in /var/www/madali/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/madali/framework/web/CWebApplication.php(141): CWebApplication->runController('../users')
+#1 /var/www/madali/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /var/www/madali/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/madali/index.php?r=../users
+HTTP_REFERER=http://localhost/madali/index.php?r=site/index
+---
+2015/09/26 10:45:16 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "views/users".' in /var/www/madali/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/madali/framework/web/CWebApplication.php(141): CWebApplication->runController('views/users')
+#1 /var/www/madali/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /var/www/madali/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/madali/index.php?r=views/users
+HTTP_REFERER=http://localhost/madali/index.php?r=site/index
+---
+2015/09/26 10:47:55 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "users".' in /var/www/madali/framework/web/CController.php:483
+Stack trace:
+#0 /var/www/madali/framework/web/CController.php(270): CController->missingAction('users')
+#1 /var/www/madali/framework/web/CWebApplication.php(282): CController->run('users')
+#2 /var/www/madali/framework/web/CWebApplication.php(141): CWebApplication->runController('site/users')
+#3 /var/www/madali/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#4 /var/www/madali/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/madali/index.php?r=site/users
+HTTP_REFERER=http://localhost/madali/index.php?r=site/index
+---
