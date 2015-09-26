@@ -54,7 +54,7 @@
 			<div id="user">
 				<?php $this->widget('zii.widgets.CMenu',array(
 					'items'=>array(
-						array('label'=>Yii::app()->user->name, 'url'=>array('/site/logout'), 'visible'=>!Yii::app()->user->isGuest)
+						array('label'=>Yii::app()->user->name, 'url'=>array('/profile'), 'visible'=>!Yii::app()->user->isGuest)
 					),
 				)); ?>
 			</div><!-- user -->
