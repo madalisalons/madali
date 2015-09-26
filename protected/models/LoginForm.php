@@ -37,7 +37,7 @@ class LoginForm extends CFormModel
 	{
 		return array(
 			'rememberMe'=>'Հիշել ինձ',
-			'username'=>'Հեռախոսահամար',
+			'username'=>'Մուտքանուն',
 			'password'=>'Գաղտնաբառ',
 		);
 	}
@@ -52,7 +52,7 @@ class LoginForm extends CFormModel
 		{
 			$this->_identity=new UserIdentity($this->username,$this->password);
 			if(!$this->_identity->authenticate())
-				$this->addError('password','Սխալ հեռախոսահամար կամ գաղտնաբառ');
+				$this->addError('password','Սխալ մուտքանուն կամ գաղտնաբառ');
 		}
 	}
 

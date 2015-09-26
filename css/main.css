@@ -77,6 +77,8 @@ body
   -moz-border-radius: 100px / 50px;
   -webkit-border-radius: 100px / 50px;
   border-radius: 100px / 50px;
+	border: 2px solid;
+  border-style: dashed;
 }
 
 #m
@@ -159,8 +161,8 @@ body
 
 #user
 {
-	float: left;
-  margin-left: 15px;
+	float: right;
+  margin-right: 35px;
 	margin-top: 44px;
 }
 
@@ -180,7 +182,7 @@ body
 	color:#F1EAEA;
 	background-color:transparent;
 	font-size:17px;
-	/*font-family: LittleLord;*/
+	font-weight: bold;
 	text-decoration:none;
 	padding:5px 15px;
 }
@@ -238,6 +240,8 @@ body
 	-webkit-border-radius: 100px / 50px;
 	border-radius: 100px / 50px;
 	padding: 15px 0;
+	border: 2px solid;
+  border-style: dashed;
 }
 
 div.flash-error, div.flash-notice, div.flash-success
