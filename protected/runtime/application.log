@@ -1179,3 +1179,12 @@ Stack trace:
 REQUEST_URI=/madali/index.php?r=users
 HTTP_REFERER=http://localhost/madali/index.php
 ---
+2015/09/26 17:21:35 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "booking".' in /var/www/madali/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/madali/framework/web/CWebApplication.php(141): CWebApplication->runController('booking')
+#1 /var/www/madali/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /var/www/madali/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/madali/index.php?r=booking
+HTTP_REFERER=http://localhost/madali/index.php?r=profile
+---
